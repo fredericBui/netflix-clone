@@ -14,7 +14,6 @@ function Row({ title, fetchURL, isLargeRow }) {
         .get("https://api.themoviedb.org/3/" + fetchURL)
         .then(function (response) {
           // handle success
-          console.log(response);
           setMovies(response.data.results);
         });
       return request;
@@ -22,7 +21,7 @@ function Row({ title, fetchURL, isLargeRow }) {
     fetchData();
   }, [fetchURL]);
 
-  console.table(movies);
+  // console.table(movies);
 
   return (
     <div className="row">
